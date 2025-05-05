@@ -1,4 +1,11 @@
 {
+  "private": true,
+  "author": {
+    "name": "Lucas Gabriel"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "typescript": "^5.8.3"
   }
