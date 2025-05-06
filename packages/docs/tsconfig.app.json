@@ -8,7 +8,8 @@
     "skipLibCheck": true,
     "paths": {
       "@ignite-ui/react": ["../react/src"],
-      "@ignite-ui/react/*": ["../react/src/*"]
+      "@ignite-ui/react/*": ["../react/src/*"],
+      "@ignite-ui/tokens/*": ["../tokens/src/*"]
     },
 
     /* Bundler mode */
