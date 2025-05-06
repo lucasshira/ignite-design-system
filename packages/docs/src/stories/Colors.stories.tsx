@@ -1,13 +1,18 @@
-import type { Meta } from "@storybook/react";
-import { ColorsGrid } from "../components/ColorsGrid";
+import type { Meta } from '@storybook/react'
+import { ColorsGrid } from '../components/ColorsGrid'
 
 export default {
-  title: "Colors",
+  title: "Tokens/Colors",
   component: ColorsGrid,
 } as Meta
 
 export const Default = {
-  render: () => <ColorsGrid />,
+  render: () => (
+    <div style={{ padding: "1.5rem" }}>
+      <h1>Colors</h1>
+      <ColorsGrid />
+    </div>
+  ),
   parameters: {
     layout: "fullscreen",
   },
