@@ -37,7 +37,8 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.tsx
 var index_exports = {};
 __export(index_exports, {
-  Button: () => Button
+  Box: () => Box,
+  Text: () => Text
 });
 module.exports = __toCommonJS(index_exports);
 
@@ -143,36 +144,44 @@ var {
   }
 });
 
-// src/index.tsx
-var Button = styled("button", {
+// src/components/Box.tsx
+var Box = styled("div", {
+  padding: "$4",
+  borderRadius: "$md",
+  backgroundColor: "$gray200",
+  border: "1px solid $gray600",
+  color: "$white"
+});
+
+// src/components/Text.tsx
+var Text = styled("p", {
   fontFamily: "$default",
-  backgroundColor: "$ignite500",
-  borderRadius: "$sm",
-  height: "$10",
-  border: 0,
-  fontWeight: "$bold",
-  color: "$white",
-  cursor: "pointer",
-  "&:hover": {
-    backgroundColor: "$ignite300"
-  },
+  lineHeight: "$base",
+  margin: 0,
+  color: "$gray800",
   variants: {
     size: {
-      small: {
-        fontSize: "$sm",
-        padding: "$1 $2"
-      },
-      big: {
-        fontSize: "$lg",
-        padding: "$3 $4"
-      }
+      xxs: { fontSize: "$xxs" },
+      xs: { fontSize: "$xs" },
+      sm: { fontSize: "$sm" },
+      md: { fontSize: "$md" },
+      lg: { fontSize: "$lg" },
+      xl: { fontSize: "$xl" },
+      "2xl": { fontSize: "$2xl" },
+      "4xl": { fontSize: "$4xl" },
+      "5xl": { fontSize: "$5xl" },
+      "6xl": { fontSize: "$6xl" },
+      "7xl": { fontSize: "$7xl" },
+      "8xl": { fontSize: "$8xl" },
+      "9xl": { fontSize: "$9xl" }
     }
   },
   defaultVariants: {
-    size: "small"
+    size: "md"
   }
 });
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  Button
+  Box,
+  Text
 });
