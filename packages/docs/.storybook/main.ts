@@ -33,7 +33,7 @@ import path from 'node:path'
 const config: StorybookConfig = {
   framework: '@storybook/react-vite',
   stories: ['../src/stories/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: ['@storybook/addon-essentials', 'storybook-dark-mode'],
+  addons: ['@storybook/addon-essentials', 'storybook-dark-mode', '@storybook/addon-docs'],
   viteFinal: async (config) => {
     config.resolve = {
       ...config.resolve,

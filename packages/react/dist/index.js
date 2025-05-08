@@ -124,7 +124,7 @@ var {
 var Box = styled("div", {
   padding: "$4",
   borderRadius: "$md",
-  backgroundColor: "$gray200",
+  backgroundColor: "$gray900",
   border: "1px solid $gray600",
   color: "$white"
 });
@@ -134,7 +134,7 @@ var Text = styled("p", {
   fontFamily: "$default",
   lineHeight: "$base",
   margin: 0,
-  color: "$gray800",
+  color: "$white",
   variants: {
     size: {
       xxs: { fontSize: "$xxs" },
@@ -156,7 +156,71 @@ var Text = styled("p", {
     size: "md"
   }
 });
+
+// src/components/Heading.tsx
+var Heading = styled("h2", {
+  fontFamily: "$default",
+  lineHeight: "$shorter",
+  margin: 0,
+  color: "$white",
+  variants: {
+    size: {
+      small: { fontSize: "$xl" },
+      medium: { fontSize: "$2xl" },
+      large: { fontSize: "$4xl" },
+      "2xl": { fontSize: "$5xl" },
+      "3xl": { fontSize: "$6xl" },
+      "4xl": { fontSize: "$7xl" },
+      "5xl": { fontSize: "$8xl" },
+      "6xl": { fontSize: "$9xl" }
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
+});
+
+// src/components/Avatar/styles.ts
+import * as Avatar from "@radix-ui/react-avatar";
+var AvatarContainer = styled(Avatar.Root, {
+  borderRadius: "$full",
+  display: "inline-block",
+  width: "$12",
+  height: "$12",
+  overflow: "hidden"
+});
+var AvatarImage = styled(Avatar.Image, {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "inherit"
+});
+var AvatarFallback = styled(Avatar.Fallback, {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "$gray400",
+  color: "$gray800",
+  svg: {
+    width: "$6",
+    height: "$6"
+  }
+});
+
+// src/components/Avatar/index.tsx
+import { User } from "phosphor-react";
+import { jsx, jsxs } from "react/jsx-runtime";
+function Avatar2(props) {
+  return /* @__PURE__ */ jsxs(AvatarContainer, { children: [
+    /* @__PURE__ */ jsx(AvatarImage, __spreadValues({}, props)),
+    /* @__PURE__ */ jsx(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx(User, {}) })
+  ] });
+}
 export {
+  Avatar2 as Avatar,
   Box,
+  Heading,
   Text
 };
