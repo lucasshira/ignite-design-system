@@ -3,8 +3,8 @@ import type { HeadingProps } from '@ignite-ui/react'
 import type { Meta, StoryObj } from '@storybook/react'
 
 export default {
-  component: Heading,
   title: 'Typography/Heading',
+  component: Heading,
   args: {
     children: 'Custom Heading - $default',
   }
