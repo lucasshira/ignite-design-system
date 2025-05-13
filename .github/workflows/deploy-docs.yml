@@ -28,6 +28,9 @@ jobs:
       - name: Deploy Storybook to GitHub Pages
         working-directory: ./packages/docs
         run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           npx storybook-to-ghpages --ci --existing-output-dir=storybook-static
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
