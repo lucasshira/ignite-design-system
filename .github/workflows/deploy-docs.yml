@@ -3,7 +3,7 @@ name: Deploy Storybook
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-deploy:
@@ -26,8 +26,7 @@ jobs:
         run: npm run build-storybook
 
       - name: Deploy Storybook to GitHub Pages
-        uses: storybookjs/storybook-deployer@v2.8.1
-        with:
-          directory: packages/docs/storybook-static
+        working-directory: ./packages/docs
+        run: npx storybook-to-ghpages --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
