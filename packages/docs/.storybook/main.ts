@@ -8,7 +8,11 @@ const config: StorybookConfig = {
   docs: {
     defaultName: 'Documentation',
   },
-  viteFinal: async (config) => {
+  viteFinal: async (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/ignite-design-system/'
+    }
+
     config.resolve = {
       ...config.resolve,
       alias: {
