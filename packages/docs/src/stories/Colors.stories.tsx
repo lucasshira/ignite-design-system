@@ -4,6 +4,7 @@ import { ColorsGrid } from '../components/ColorsGrid'
 export default {
   title: "Tokens/Colors",
   component: ColorsGrid,
+  tags: ['autodocs'],
 } as Meta
 
 export const Default = {

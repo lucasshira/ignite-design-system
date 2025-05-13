@@ -19,7 +19,8 @@ const preview: Preview = {
       current: 'dark',
       dark: { ...themes.dark, appBg: '#000000' },
       light: { ...themes.normal, appBg: 'red' },
-    }
+    },
+    tags: ['autodocs']
   },
 };
 

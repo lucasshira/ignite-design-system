@@ -4,7 +4,8 @@ import { radii } from '@ignite-ui/tokens'
 
 export default {
   title: 'Tokens/Radii',
-  component: TokensGrid
+  component: TokensGrid,
+  tags: ['autodocs'],
 } as Meta
 
 export const Default = {

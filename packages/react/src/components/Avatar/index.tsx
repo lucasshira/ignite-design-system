@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import { AvatarContainer, AvatarFallback, AvatarImage } from './styles'
 import { User } from 'phosphor-react'
 
@@ -15,3 +15,5 @@ export function Avatar(props: AvatarProps) {
     </AvatarContainer>
   )
 }
+
+Avatar.displayName = 'Avatar'

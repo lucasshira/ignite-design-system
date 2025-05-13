@@ -4,7 +4,8 @@ import { fonts } from '@ignite-ui/tokens'
 
 export default {
   title: 'Tokens/Fonts',
-  component: TokensGrid
+  component: TokensGrid,
+  tags: ['autodocs'],
 } as Meta
 
 export const Default = {

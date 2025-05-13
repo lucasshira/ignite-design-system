@@ -4,7 +4,8 @@ import { space } from '@ignite-ui/tokens'
 
 export default {
   title: 'Tokens/Spaces',
-  component: TokensGrid
+  component: TokensGrid,
+  tags: ['autodocs'],
 } as Meta
 
 export const Default = {

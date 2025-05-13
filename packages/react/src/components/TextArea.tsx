@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import { styled } from '../styles'
 
 export const TextArea = styled('textarea', {
@@ -32,3 +32,5 @@ export const TextArea = styled('textarea', {
 export interface TextAreaProps extends ComponentProps<typeof TextArea> {
   as?: string
 }
+
+TextArea.displayName = 'TextArea'

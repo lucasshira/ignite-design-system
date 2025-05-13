@@ -5,6 +5,7 @@ import { lineHeights } from '@ignite-ui/tokens'
 export default {
   title: 'Tokens/Line Heights',
   component: TokensGrid,
+  tags: ['autodocs'],
 } as Meta
 
 export const Default = {
