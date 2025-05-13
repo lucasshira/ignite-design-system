@@ -5,10 +5,11 @@ import path from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  base: '/ignite-design-system/',
   plugins: [react()],
   resolve: {
     alias: {
-      '@ignite-ui/tokens': path.resolve(__dirname, '../path/to/tokens'), // Ajuste o caminho para o diretório do pacote
+      '@ignite-ui/tokens': path.resolve(__dirname, '../path/to/tokens'),
     },
   },
 })
