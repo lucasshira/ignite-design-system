@@ -27,6 +27,7 @@ jobs:
 
       - name: Deploy Storybook to GitHub Pages
         working-directory: ./packages/docs
-        run: npx storybook-to-ghpages --ci --existing-output-dir=storybook-static
+        run: |
+          npx storybook-to-ghpages --ci --existing-output-dir=storybook-static
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
