@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react'
 import { TokensGrid } from '../components/TokensGrid'
-import { fonts } from '@ignite-ui/tokens'
+import { fonts } from '@shira-ui/tokens'
 
 export default {
   title: 'Tokens/Fonts',

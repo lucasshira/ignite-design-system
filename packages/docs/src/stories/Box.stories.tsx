@@ -1,5 +1,5 @@
-import { Box, Text } from "@ignite-ui/react";
-import type { BoxProps } from "@ignite-ui/react";
+import { Box, Text } from "@shira-ui/react";
+import type { BoxProps } from "@shira-ui/react";
 
 import type { Meta, StoryObj } from "@storybook/react";
 

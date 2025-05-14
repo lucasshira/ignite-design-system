@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@ignite-ui/tokens': path.resolve(__dirname, '../path/to/tokens'),
+      '@shira-ui/tokens': path.resolve(__dirname, '../path/to/tokens'),
     },
   },
 })

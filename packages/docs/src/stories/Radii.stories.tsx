@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react'
 import { TokensGrid } from '../components/TokensGrid'
-import { radii } from '@ignite-ui/tokens'
+import { radii } from '@shira-ui/tokens'
 
 export default {
   title: 'Tokens/Radii',

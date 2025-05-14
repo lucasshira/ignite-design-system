@@ -7,9 +7,9 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "paths": {
-      "@ignite-ui/react": ["../react/src"],
-      "@ignite-ui/react/*": ["../react/src/*"],
-      "@ignite-ui/tokens/*": ["../tokens/src/*"]
+      "@shira-ui/react": ["../react/src"],
+      "@shira-ui/react/*": ["../react/src/*"],
+      "@shira-ui/tokens/*": ["../tokens/src/*"]
     },
 
     /* Bundler mode */

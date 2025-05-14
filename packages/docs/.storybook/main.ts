@@ -15,8 +15,8 @@ const config: StorybookConfig = {
       ...config.resolve,
       alias: {
         ...(config.resolve?.alias || {}),
-        '@ignite-ui/react': path.resolve(__dirname, '../../react/dist'),
-        '@ignite-ui/tokens': path.resolve(__dirname, '../../tokens/dist'),
+        '@shira-ui/react': path.resolve(__dirname, '../../react/dist'),
+        '@shira-ui/tokens': path.resolve(__dirname, '../../tokens/dist'),
       },
     }
     return config

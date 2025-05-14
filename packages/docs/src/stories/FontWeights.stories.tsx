@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react'
 import { TokensGrid } from '../components/TokensGrid'
-import { fontWeights } from '@ignite-ui/tokens'
+import { fontWeights } from '@shira-ui/tokens'
 
 export default {
   title: 'Tokens/Font Weights',

@@ -1,5 +1,5 @@
-import { Heading } from '@ignite-ui/react'
-import type { HeadingProps } from '@ignite-ui/react'
+import { Heading } from '@shira-ui/react'
+import type { HeadingProps } from '@shira-ui/react'
 import type { Meta, StoryObj } from '@storybook/react'
 
 export default {

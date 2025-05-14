@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from "@ignite-ui/react";
+import { Button, type ButtonProps } from "@shira-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ArrowRight } from "phosphor-react";
 

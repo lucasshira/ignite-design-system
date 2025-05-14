@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react'
 import { TokensGrid } from '../components/TokensGrid'
-import { space } from '@ignite-ui/tokens'
+import { space } from '@shira-ui/tokens'
 
 export default {
   title: 'Tokens/Font Sizes',
