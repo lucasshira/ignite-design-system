@@ -33,12 +33,10 @@ jobs:
         run: npm run build-storybook
 
       - name: Deploy Storybook to GitHub Pages
-        working-directory: ./packages/docs
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          # Configurar o remote com o GITHUB_TOKEN
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/lucasshira/ignite-design-system.git
-          npx storybook-to-ghpages --ci --existing-output-dir=storybook-static
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./packages/docs/storybook-static
+          publish_branch: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
