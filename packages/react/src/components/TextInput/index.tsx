@@ -1,4 +1,4 @@
-import { ComponentProps, ComponentRef, forwardRef } from 'react'
+import { type ComponentProps, type ComponentRef, forwardRef } from 'react'
 import { Input, Prefix, TextInputContainer } from './style'
 
 export interface TextInputProps extends ComponentProps<typeof Input> {
