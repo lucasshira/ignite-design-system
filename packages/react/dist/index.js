@@ -541,6 +541,64 @@ var Tooltip = styled("div", {
   }
 });
 Tooltip.displayName = "Tooltip";
+
+// src/components/Toast/styles.ts
+import * as Toast from "@radix-ui/react-toast";
+var ToastContainer = styled(Toast.Root, {
+  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  width: "$80",
+  height: "$12",
+  backgroundColor: "$gray800",
+  padding: "$3 $5",
+  border: "1px solid $gray600",
+  borderRadius: "$sm",
+  fontFamily: "$default"
+});
+var ToastTitle = styled(Toast.Title, {
+  color: "$gray100",
+  fontSize: "$lg",
+  fontWeight: "$bold",
+  marginBottom: "$1"
+});
+var ToastDescription = styled(Toast.Description, {
+  color: "$gray400",
+  fontSize: "$sm"
+});
+var ToastCloseButton = styled(Toast.Close, {
+  all: "unset",
+  cursor: "pointer",
+  position: "absolute",
+  top: 8,
+  right: 8,
+  color: "$gray400",
+  lineHeight: 0,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  "&:hover": {
+    color: "$white"
+  }
+});
+
+// src/components/Toast/index.tsx
+import { ToastProvider, ToastViewport } from "@radix-ui/react-toast";
+import { X } from "phosphor-react";
+import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
+function Toast2(_a) {
+  var _b = _a, { description } = _b, props = __objRest(_b, ["description"]);
+  return /* @__PURE__ */ jsxs4(ToastProvider, { duration: 1e5, children: [
+    /* @__PURE__ */ jsxs4(ToastContainer, __spreadProps(__spreadValues({}, props), { children: [
+      /* @__PURE__ */ jsx5(ToastTitle, { children: "Agendamento realizado" }),
+      /* @__PURE__ */ jsx5(ToastDescription, { children: description }),
+      /* @__PURE__ */ jsx5(ToastCloseButton, { children: /* @__PURE__ */ jsx5(X, { size: 16 }) })
+    ] })),
+    /* @__PURE__ */ jsx5(ToastViewport, {})
+  ] });
+}
+Toast2.displayName = "Toast";
 export {
   Avatar2 as Avatar,
   Box,
@@ -551,6 +609,7 @@ export {
   Text,
   TextArea,
   TextInput,
+  Toast2 as Toast,
   Tooltip,
   config,
   createTheme,

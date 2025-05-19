@@ -68,6 +68,7 @@ __export(index_exports, {
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
+  Toast: () => Toast2,
   Tooltip: () => Tooltip,
   config: () => config,
   createTheme: () => createTheme,
@@ -591,6 +592,64 @@ var Tooltip = styled("div", {
   }
 });
 Tooltip.displayName = "Tooltip";
+
+// src/components/Toast/styles.ts
+var Toast = __toESM(require("@radix-ui/react-toast"), 1);
+var ToastContainer = styled(Toast.Root, {
+  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  width: "$80",
+  height: "$12",
+  backgroundColor: "$gray800",
+  padding: "$3 $5",
+  border: "1px solid $gray600",
+  borderRadius: "$sm",
+  fontFamily: "$default"
+});
+var ToastTitle = styled(Toast.Title, {
+  color: "$gray100",
+  fontSize: "$lg",
+  fontWeight: "$bold",
+  marginBottom: "$1"
+});
+var ToastDescription = styled(Toast.Description, {
+  color: "$gray400",
+  fontSize: "$sm"
+});
+var ToastCloseButton = styled(Toast.Close, {
+  all: "unset",
+  cursor: "pointer",
+  position: "absolute",
+  top: 8,
+  right: 8,
+  color: "$gray400",
+  lineHeight: 0,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  "&:hover": {
+    color: "$white"
+  }
+});
+
+// src/components/Toast/index.tsx
+var import_react_toast = require("@radix-ui/react-toast");
+var import_phosphor_react3 = require("phosphor-react");
+var import_jsx_runtime5 = require("react/jsx-runtime");
+function Toast2(_a) {
+  var _b = _a, { description } = _b, props = __objRest(_b, ["description"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_react_toast.ToastProvider, { duration: 1e5, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(ToastContainer, __spreadProps(__spreadValues({}, props), { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastTitle, { children: "Agendamento realizado" }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastDescription, { children: description }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastCloseButton, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_phosphor_react3.X, { size: 16 }) })
+    ] })),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react_toast.ToastViewport, {})
+  ] });
+}
+Toast2.displayName = "Toast";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -602,6 +661,7 @@ Tooltip.displayName = "Tooltip";
   Text,
   TextArea,
   TextInput,
+  Toast,
   Tooltip,
   config,
   createTheme,
