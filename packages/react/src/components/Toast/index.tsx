@@ -10,16 +10,18 @@ import { ToastProvider, ToastViewport } from '@radix-ui/react-toast'
 import { X } from 'phosphor-react'
 
 export interface ToastProps extends ComponentProps<typeof ToastContainer> {
+  title: string
+  duration: number
   description: string
 }
 
-export function Toast({ description, ...props }: ToastProps) {
+export function Toast({ title, description, duration, ...props }: ToastProps) {
   return (
-    <ToastProvider duration={100000}>
-      <ToastContainer {...props}>
-        <ToastTitle>Agendamento realizado</ToastTitle>
+    <ToastProvider duration={duration}>
+      <ToastContainer as="li" {...props} aria-hidden="false">
+        <ToastTitle>{title}</ToastTitle>
         <ToastDescription>{description}</ToastDescription>
-        <ToastCloseButton>
+        <ToastCloseButton aria-label="Fechar notificação" asChild>
           <X size={16} />
         </ToastCloseButton>
       </ToastContainer>

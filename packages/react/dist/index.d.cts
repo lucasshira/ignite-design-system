@@ -2102,9 +2102,11 @@ declare const ToastContainer: _stitches_react_types_styled_component.StyledCompo
 }, {}>>;
 
 interface ToastProps extends ComponentProps<typeof ToastContainer> {
+    title: string;
+    duration: number;
     description: string;
 }
-declare function Toast({ description, ...props }: ToastProps): react_jsx_runtime.JSX.Element;
+declare function Toast({ title, description, duration, ...props }: ToastProps): react_jsx_runtime.JSX.Element;
 declare namespace Toast {
     var displayName: string;
 }

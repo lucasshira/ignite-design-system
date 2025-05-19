@@ -6,7 +6,9 @@ export default {
   component: Toast,
   tags: ['autodocs'],
   args: {
+    title: 'Agendamento realizado',
     description: 'Quarta-feira, 23 de Outubro às 16h',
+    duration: 10000
   },
   decorators: [
     (Story) => {

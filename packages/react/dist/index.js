@@ -588,12 +588,12 @@ import { ToastProvider, ToastViewport } from "@radix-ui/react-toast";
 import { X } from "phosphor-react";
 import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
 function Toast2(_a) {
-  var _b = _a, { description } = _b, props = __objRest(_b, ["description"]);
-  return /* @__PURE__ */ jsxs4(ToastProvider, { duration: 1e5, children: [
-    /* @__PURE__ */ jsxs4(ToastContainer, __spreadProps(__spreadValues({}, props), { children: [
-      /* @__PURE__ */ jsx5(ToastTitle, { children: "Agendamento realizado" }),
+  var _b = _a, { title, description, duration } = _b, props = __objRest(_b, ["title", "description", "duration"]);
+  return /* @__PURE__ */ jsxs4(ToastProvider, { duration, children: [
+    /* @__PURE__ */ jsxs4(ToastContainer, __spreadProps(__spreadValues({ as: "li" }, props), { "aria-hidden": "false", children: [
+      /* @__PURE__ */ jsx5(ToastTitle, { children: title }),
       /* @__PURE__ */ jsx5(ToastDescription, { children: description }),
-      /* @__PURE__ */ jsx5(ToastCloseButton, { children: /* @__PURE__ */ jsx5(X, { size: 16 }) })
+      /* @__PURE__ */ jsx5(ToastCloseButton, { "aria-label": "Fechar notifica\xE7\xE3o", asChild: true, children: /* @__PURE__ */ jsx5(X, { size: 16 }) })
     ] })),
     /* @__PURE__ */ jsx5(ToastViewport, {})
   ] });
