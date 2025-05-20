@@ -641,7 +641,7 @@ var import_jsx_runtime5 = require("react/jsx-runtime");
 function Toast2(_a) {
   var _b = _a, { title, description, duration } = _b, props = __objRest(_b, ["title", "description", "duration"]);
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_react_toast.ToastProvider, { duration, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(ToastContainer, __spreadProps(__spreadValues({ as: "li" }, props), { "aria-hidden": "false", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(ToastContainer, __spreadProps(__spreadValues({}, props), { children: [
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastTitle, { children: title }),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastDescription, { children: description }),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastCloseButton, { "aria-label": "Fechar notifica\xE7\xE3o", asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_phosphor_react3.X, { size: 16 }) })

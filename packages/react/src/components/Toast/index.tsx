@@ -18,7 +18,7 @@ export interface ToastProps extends ComponentProps<typeof ToastContainer> {
 export function Toast({ title, description, duration, ...props }: ToastProps) {
   return (
     <ToastProvider duration={duration}>
-      <ToastContainer as="li" {...props} aria-hidden="false">
+      <ToastContainer {...props}>
         <ToastTitle>{title}</ToastTitle>
         <ToastDescription>{description}</ToastDescription>
         <ToastCloseButton aria-label="Fechar notificação" asChild>
