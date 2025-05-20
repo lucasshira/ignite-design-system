@@ -1,5 +1,12 @@
 # @shira-ui/react
 
+## 3.1.0
+
+### Minor Changes
+
+- 12ec16d: Fix toast stories component
+- a5987d2: Fix packages
+
 ## 3.0.0
 
 ### Major Changes
