@@ -1,5 +1,11 @@
 # @shira-ui/react
 
+## 4.0.0
+
+### Major Changes
+
+- 33f828d: Accessibility improvements on Toast component and props correction
+
 ## 3.1.0
 
 ### Minor Changes
