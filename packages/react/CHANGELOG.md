@@ -1,5 +1,11 @@
 # @shira-ui/react
 
+## 4.1.0
+
+### Minor Changes
+
+- f55dfad: Fix
+
 ## 4.0.0
 
 ### Major Changes
